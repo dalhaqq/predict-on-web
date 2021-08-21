@@ -105,14 +105,16 @@ function predict() {
         });
     }
     let max = 0;
-    let maxLabel = 'Unpredictable';
+    let maxLabel = '';
+    let total = 0;
     for (let label in counts) {
         if (counts[label] > max) {
             max = counts[label];
             maxLabel = label;
         }
+        total += counts[label];
     }
     let result = document.getElementById('result');
-    result.innerHTML = 'Hasil: ' + maxLabel + '<br>Skor: ' + max;
+    result.innerHTML = maxLabel ? 'Hasil: ' + maxLabel + '<br>Skor: ' + max.toFixed(5) + ' (' + (max/total*100).toFixed(2) +'%)' : 'Tidak dapat diklasifikasi';
     console.log(counts);
 }
