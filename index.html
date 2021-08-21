@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Naive Bayes Classifier</title>
 </head>
 <body>
     <div id="container">
         <textarea id="data" rows="10" cols="50">
-Jenis Kelamin, Tagihan, Jumlah Tanggungan
-LAKI-LAKI, RENDAH, 1, YA
-LAKI-LAKI, TINGGI, 2, TIDAK
-LAKI-LAKI, TINGGI, 1, YA
-PEREMPUAN, RENDAH, 1, TIDAK
-LAKI-LAKI, RENDAH, 1, TIDAK
-LAKI-LAKI, TINGGI, 1, TIDAK
-PEREMPUAN, RENDAH, 2, TIDAK
-PEREMPUAN, RENDAH, 2, YA
-PEREMPUAN, TINGGI, 1, TIDAK
-PEREMPUAN, RENDAH, 1, TIDAK
-LAKI-LAKI, RENDAH, 2, YA
-PEREMPUAN, RENDAH, 1, TIDAK
-PEREMPUAN, RENDAH, 1, TIDAK
-LAKI-LAKI, RENDAH, 2, TIDAK
-LAKI-LAKI, TINGGI, 2, TIDAK
-PEREMPUAN, RENDAH, 1, TIDAK
-PEREMPUAN, RENDAH, 2, TIDAK
-PEREMPUAN, TINGGI, 1, TIDAK
-LAKI-LAKI, TINGGI, 1, TIDAK
-LAKI-LAKI, RENDAH, 2, YA</textarea>
+Gender, Bill, Burden, Approved
+MALE, LOW, 1, YES
+MALE, HIGH, 2, NO
+MALE, HIGH, 1, YES
+FEMALE, LOW, 1, NO
+MALE, LOW, 1, NO
+MALE, HIGH, 1, NO
+FEMALE, LOW, 2, NO
+FEMALE, LOW, 2, YES
+FEMALE, HIGH, 1, NO
+FEMALE, LOW, 1, NO
+MALE, LOW, 2, YES
+FEMALE, LOW, 1, NO
+FEMALE, LOW, 1, NO
+MALE, LOW, 2, NO
+MALE, HIGH, 2, NO
+FEMALE, LOW, 1, NO
+FEMALE, LOW, 2, NO
+FEMALE, HIGH, 1, NO
+MALE, HIGH, 1, NO
+MALE, LOW, 2, YES</textarea>
         <button id="button" onclick="processData()">Process</button>
         <div id="prediction-box"></div>
         <script src="index.js"></script>
