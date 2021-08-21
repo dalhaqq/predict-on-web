@@ -12,10 +12,12 @@ function generateForm() {
     while(form.hasChildNodes()) {
         form.removeChild(form.lastChild);
     }
+    let hr = document.createElement('hr');
+    form.appendChild(hr);
     for (let i = 0; i < dataSet.length - 1; i++) {
         let label = document.createElement('label');
-        label.innerHTML = params[i];
         label.setAttribute('for', 'val' + i);
+        label.innerHTML = params[i];
         let select = document.createElement('select');
         select.setAttribute('id', 'val' + i);
         select.setAttribute('name', 'val' + i);
@@ -33,7 +35,10 @@ function generateForm() {
     }
     let submit = document.createElement('button');
     submit.setAttribute('onclick', 'predict()');
-    submit.innerHTML = 'Predict';
+    submit.innerHTML = 'Prediksi';
+    submit.addEventListener("click", function(event){
+        event.preventDefault()
+      });
     form.appendChild(submit);
 }
 
@@ -108,6 +113,6 @@ function predict() {
         }
     }
     let result = document.getElementById('result');
-    result.innerHTML = 'Result: ' + maxLabel + '<br>Score: ' + max;
+    result.innerHTML = 'Hasil: ' + maxLabel + '<br>Skor: ' + max;
     console.log(counts);
 }

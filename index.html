@@ -4,36 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Naive Bayes Classifier</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Klasifikasi Naive Bayes Sederhana</title>
 </head>
 <body>
-    <div id="container">
-        <textarea id="data" rows="10" cols="50">
-Gender, Bill, Burden, Approved
-MALE, LOW, 1, YES
-MALE, HIGH, 2, NO
-MALE, HIGH, 1, YES
-FEMALE, LOW, 1, NO
-MALE, LOW, 1, NO
-MALE, HIGH, 1, NO
-FEMALE, LOW, 2, NO
-FEMALE, LOW, 2, YES
-FEMALE, HIGH, 1, NO
-FEMALE, LOW, 1, NO
-MALE, LOW, 2, YES
-FEMALE, LOW, 1, NO
-FEMALE, LOW, 1, NO
-MALE, LOW, 2, NO
-MALE, HIGH, 2, NO
-FEMALE, LOW, 1, NO
-FEMALE, LOW, 2, NO
-FEMALE, HIGH, 1, NO
-MALE, HIGH, 1, NO
-MALE, LOW, 2, YES</textarea>
-        <button id="button" onclick="processData()">Process</button>
-        <div id="prediction-box"></div>
-        <script src="index.js"></script>
-        <div id="result"></div>
-    </div>
+    <header>
+        <h1>Klasifikasi Naive Bayes Sederhana</h1>
+        <nav><a href="https://github.com/dalhaqq/predict-on-web"><span class="icon github"></span> Github Repo</a></nav>
+    </header>
+    <main>
+        <div id="container">
+            <p>Isikan dataset Anda ke text area berikut. Baris pertama berisi label/header data. Baris berikutnya berisi data diikuti dengan kelompok/hasil klasifikasi yang sudah diketahui. Masing-masing data dipisahkan dengan koma. Tidak perlu memberi koma di akhir baris. Contoh format:</p>
+            <textarea id="data" rows="10" style="width: 100%;">
+JENIS KELAMIN, TAGIHAN, JUMLAH TANGGUNGAN, DITERIMA
+Laki-laki, Rendah, 1, Ya
+Laki-laki, Tinggi, 2, Tidak
+Laki-laki, Tinggi, 1, Ya
+Perempuan, Rendah, 1, Tidak
+Laki-laki, Rendah, 1, Tidak
+Laki-laki, Tinggi, 1, Tidak
+Perempuan, Rendah, 2, Tidak
+Perempuan, Rendah, 2, Ya
+Perempuan, Tinggi, 1, Tidak
+Perempuan, Rendah, 1, Tidak
+Laki-laki, Rendah, 2, Ya
+Perempuan, Rendah, 1, Tidak
+Perempuan, Rendah, 1, Tidak
+Laki-laki, Rendah, 2, Tidak
+Laki-laki, Tinggi, 2, Tidak
+Perempuan, Rendah, 1, Tidak
+Perempuan, Rendah, 2, Tidak
+Perempuan, Tinggi, 1, Tidak
+Laki-laki, Tinggi, 1, Tidak
+Laki-laki, Rendah, 2, Ya</textarea>
+<br>
+<button id="button" onclick="processData()">Proses</button>
+<form id="prediction-box"></form>
+<script src="index.js"></script>
+<div id="result"></div>
+</div>
+</main>
+<footer>
+    <p>Abdalhaqq M Saih &copy; 2021</p>
+</footer>
 </body>
 </html>
