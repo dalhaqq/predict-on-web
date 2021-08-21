@@ -95,13 +95,13 @@ function predict() {
     });
     for (let i = 0; i < inputData.length; i++) {
         labels.forEach(label => {
-            let XCount = 0;
+            let XAndY = 0;
             for (let j = 0; j < trainData.length; j++) {
                 if (inputData[i] == trainData[j][i] && Y[j] == label) {
-                    XCount++;
+                    XAndY++;
                 }
             }
-            counts[label] *= XCount/count(Y, label);
+            counts[label] *= XAndY/count(Y, label);
         });
     }
     let max = 0;
