@@ -1,10 +1,10 @@
-let rawData, dataSet, trainData, labels;
+let rawData, dataSet, trainData, labels, vars;
 
 function reset() {
     dataSet = [];
     trainData = [];
     labels = [];
-    params = [];
+    vars = [];
 }
 
 function generateForm() {
@@ -17,7 +17,7 @@ function generateForm() {
     for (let i = 0; i < dataSet.length - 1; i++) {
         let label = document.createElement('label');
         label.setAttribute('for', 'val' + i);
-        label.innerHTML = params[i];
+        label.innerHTML = vars[i];
         let select = document.createElement('select');
         select.setAttribute('id', 'val' + i);
         select.setAttribute('name', 'val' + i);
@@ -46,7 +46,7 @@ function processData() {
     reset();
     rawData = document.getElementById('data').value;
     let data = rawData.trim().split('\n');
-    params = data.shift().split(',');
+    vars = data.shift().split(',');
     for (let i = 0; i < data.length; i++) {
         if (data[i] === '') {
             data.splice(i, 1);
