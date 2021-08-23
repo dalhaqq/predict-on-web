@@ -1,4 +1,4 @@
-let rawData, dataSet, trainData, labels, vars;
+let dataSet, trainData, labels, vars;
 
 function reset() {
     dataSet = [];
@@ -8,7 +8,7 @@ function reset() {
 }
 
 function generateForm() {
-    let form = document.getElementById('prediction-box');
+    const form = document.getElementById('prediction-box');
     while(form.hasChildNodes()) {
         form.removeChild(form.lastChild);
     }
@@ -44,7 +44,7 @@ function generateForm() {
 
 function processData() {
     reset();
-    rawData = document.getElementById('data').value;
+    let rawData = document.getElementById('data').value;
     let data = rawData.trim().split('\n');
     vars = data.shift().split(',');
     for (let i = 0; i < data.length; i++) {
